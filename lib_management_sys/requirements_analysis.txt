@@ -1,0 +1,12 @@
+'''
+- Library consists of many books, and each book has its own attributes: name, authorName, publicationDate etc.
+- A book can have multiple copy, and each copy will have a uniqueId.
+- Everyone should be able to search book by: bookName, authorName, and find out if book copies are available.
+- There are 2 types of users: Member and Librarian
+- Librarian should be able to add/remove book copies.
+- Librarian should be able to issue book copies to members
+- Librarian should be able to submit book copies from members
+- A member should be allowed to keep a book for max of 30 days, post that a fine shall be charged a per-day basis.
+- Librarian should be able to block a member.
+- Librarian should be able to do a status check for a book-copy,(Who holds the book copy and who had issued that)
+'''
