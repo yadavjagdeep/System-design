@@ -1,5 +1,5 @@
 from lib_management_sys.auth.user_authanticator import UserAuthenticator
-
+from lib_management_sys.data_accessor.DBAccessor import DBAccessor
 class Tester:
 
     def searchByBookName(self, book_name: str):
@@ -52,7 +52,7 @@ class Tester:
         book_copy: object = BookCopy(BookDetails(book_name=book_name, publication_date=publicationDate, author=author), book_id=BookCopyIdGenerator.getUniqueBookCopyId(book_name))
 
         from lib_management_sys.library.library import Library
-        Library().addBook(book_copy)
+        Library(DBAccessor).addBook(book_copy)
 
 
     def deleteBook(self, book_copy_id: list, token: str):
@@ -69,7 +69,7 @@ class Tester:
 
         from lib_management_sys.library.library import Library
         for item in book_copies:
-            Library().deleteBook(item)
+            Library(DBAccessor).deleteBook(item)
 
 
     def issueBook(self, book_copy_ids: list, member_id: str, token: str):
@@ -91,7 +91,7 @@ class Tester:
 
         from lib_management_sys.library.library import Library
         for book_copy in book_copies:
-            Library().issueBook(book_copy, member)
+            Library(DBAccessor).issueBook(book_copy, member)
 
     def submitBook(self, book_copy_ids: list, member_id: str, token: str):
         if not UserAuthenticator.isAdmin(token):
@@ -111,7 +111,7 @@ class Tester:
 
         from lib_management_sys.library.library import Library
         for book_copy in book_copies:
-            Library().submitBook(book_copy, member)
+            Library(DBAccessor).submitBook(book_copy, member)
 
 
     def blockMember(self, member_id: str, token):
@@ -128,7 +128,7 @@ class Tester:
 
         from lib_management_sys.library.library import Library
         for member in members:
-            Library().blockMember(member)
+            Library(DBAccessor).blockMember(member)
 
 
     def borrowedBook(self, member_id: str) -> list[object]:
@@ -141,7 +141,7 @@ class Tester:
             raise RuntimeError("No member with the provided member id")
 
         from lib_management_sys.library.library import Library
-        Library().getBorrowedBooks(member)
+        Library(DBAccessor).getBorrowedBooks(member)
 
     def getBorrowerOfBooks(self, book_copy_id: str, token: str) -> object:
         if not UserAuthenticator.isAdmin(token):
@@ -156,7 +156,7 @@ class Tester:
             raise RuntimeError("No book copy with the provided book copy id")
 
         from lib_management_sys.library.library import Library
-        member = Library().getBorrower(book_copy)
+        member = Library(DBAccessor).getBorrower(book_copy)
         if not member:
             raise RuntimeError("No Borrower of the provided book copy id")
 
