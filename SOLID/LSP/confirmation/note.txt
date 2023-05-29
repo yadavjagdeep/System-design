@@ -1,0 +1,8 @@
+-> we should not create a class of volunteer type by extending Employee class instead can create a separate class for unpaid employees
+=> Idea is inheritance should never be used for code re-use
+=> Inherit a class where there is a 'strict' 'is-a' relationship b/w parent and child class
+
+-> child class should be substitutable in parent class
+
+
+

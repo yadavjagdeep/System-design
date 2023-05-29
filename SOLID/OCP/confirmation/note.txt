@@ -1,0 +1,5 @@
+-> we can easily add any number of superHero without any change needed in Attacker class
+-> Attacker class also has no need to have any info about the concreate class like 'SuperMan' or 'Batman'
+-> Attacker class is coded against 'SuperHero' abstract class
+
+=> One thing we can always do to ensure that we are not violating OCP is we always code to abstraction and not ton concretion
