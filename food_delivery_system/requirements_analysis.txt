@@ -1,0 +1,35 @@
+                           ''' Food Delivery System '''
+
+1. Users should be able to search for food item by their name. They should be able to put some filter on the search like MealType:
+Veg OR Non-Veg, CuisineType: a particular set of cuisine e.g (Italian + German)
+
+2. For the fetched food items, user should be able to navigate to the corresponding restaurant, check the menu/price list, add items to their cart
+and place order
+
+3. Different modes of payment i.e, net-banking, card, upi, cod etc.
+
+4. A cart cannot contain food from different restorers
+
+5. Users should be able to search restaurants by their names, they should be able to put some filters on the search like Veg/Non-veg, a particular
+ cuisine, etc.
+
+6. Users should be able to modify their cart i.e., add/remove foodItems or their quantities.
+
+7. The system should contain important information about users like delivery address, phone number to ensure delivery.
+
+8. User should be able to track order status: ORDER_PLACED, COOKING, READY_FOR_DELIVERY, OUT_FOR_DELIVERY, DELIVERED. In addition to these,
+a user can also cancel order if COOKING has not started, that will change the order status to CANCELLED.
+
+9. The system should also provide ETA for delivery.
+
+10. Users should be able to provide rating and feedback for the order.
+
+11. Restaurants should be able to register themselves to the system. Admin approval is required
+
+12. Restaurants should be able to update cost, food item availability, open/close time etc.
+
+
+BONUS:
+Coupon codes
+Notification System
+
