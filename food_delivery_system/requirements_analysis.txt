@@ -8,7 +8,7 @@ and place order
 
 3. Different modes of payment i.e, net-banking, card, upi, cod etc.
 
-4. A cart cannot contain food from different restorers
+4. A cart cannot contain food from different restaurants
 
 5. Users should be able to search restaurants by their names, they should be able to put some filters on the search like Veg/Non-veg, a particular
  cuisine, etc.
