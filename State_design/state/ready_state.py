@@ -15,23 +15,5 @@ class Ready_state(State):
         self.atm.change_state(StateFactory.get_state(ATMState.CARD_READING.value, self.atm))
         return transaction_id
 
-    def read_card(self, card_details: object):
-        raise NotImplementedError
-
-    def cancel_transaction(self, transaction_id: int):
-        raise NotImplementedError
-
-    def read_withdrawal_details(self, card_details: object, transaction_id: int, amount: int):
-        raise NotImplementedError
-
-    def dispense_cash(self, transaction_id: int):
-        raise NotImplementedError
-
-    def eject_card(self):
-        raise NotImplementedError
-
-    @classmethod
-    def get_state_name(cls):
+    def get_state_name(self):
         return ATMState.READY.value
-
-
