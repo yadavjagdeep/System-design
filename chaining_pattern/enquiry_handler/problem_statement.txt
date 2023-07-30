@@ -1,0 +1,1 @@
+'''Create an api that takes an input string and identifies the kind of request if it is and take a relevant action basis type'''
