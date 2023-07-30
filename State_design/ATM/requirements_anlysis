@@ -1,0 +1,14 @@
+                                     '''Design ATM Machine'''
+
+1. User should able to start new transaction.
+2. Only 1 transaction supported at a time.
+3. User Journey:
+    a. User should be able to insert a card.
+    b. The system should validate the card details.
+    c. If the card details are invalid, the card should be ejected.
+    d. If VALID, User should be asked to enter his pin and amount.
+    e. The system should validate the withdrawal details. If Invalid, card should be ejected.
+    f. If VALID, amount should be dispensed if it possible to dispense it.
+    g. Cancellation should be allowed at some place.
+
+
