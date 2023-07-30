@@ -1,0 +1,7 @@
+# Design a middle-ware that performs 3 operations
+1. Validation: Token validation to validate request
+2. Authentication: Verify the user of request
+3. Authorization: Check if the user has permission to access the resource
+
+# Problem is the order of these 3 middle-wares can change basis App's
+
