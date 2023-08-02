@@ -1,0 +1,10 @@
+''' We have to write a class that fetches data from a 'DB' small db with just 500-1000 records '''
+
+1. We need to fetch data from that db very frequently can say in every 5 Min.
+2. Fetching data from db this frequently is costly.
+3. Since db is small, we can fetch all the data at once and can load to an object & can get from there.
+
+# The solution seems good, but there is a problem; we need to have only one object floating throughout the pod,
+for that we need to make sure not more than one object is created of the class doing this in-memory caching of db data
+
+# Also, we need to make sure it is shared in diff threads as well i.e., take care of thread safety
