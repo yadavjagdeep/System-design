@@ -1,17 +1,18 @@
-from abc import ABC, abstractmethod
+from factory_design_pattern.pizza_shop.constants import PizzaName
 
 
-class Ingredients(ABC):
+class IngredientsFactory:
 
-    @abstractmethod
-    def get_base(self):
-        raise NotImplementedError(f"subclass must implement get_base method !!!")
-
-    @abstractmethod
-    def get_toppings(self):
-        raise NotImplementedError(f"subclass must implement get_toppings method !!!")
-
-    @abstractmethod
-    def get_sauces(self):
-        raise NotImplementedError(f"subclass must implement get_sauces method !!!")
+    @staticmethod
+    def get_ingredients(pizza_name: str):
+        if pizza_name.lower() == PizzaName.MARGARITA.value:
+            pass
+        elif pizza_name.lower() == PizzaName.FARMHOUSE.value:
+            pass
+        elif pizza_name.lower() == PizzaName.CHEESE_N_CORN.value:
+            pass
+        elif pizza_name.lower() == PizzaName.FRESH_VEGGIE.value:
+            pass
+        else:
+            raise RuntimeError(f"Unknown pizza {pizza_name} !!!")
 
