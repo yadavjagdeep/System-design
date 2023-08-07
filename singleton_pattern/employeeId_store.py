@@ -1,3 +1,4 @@
+import threading
 from collections import defaultdict
 
 """ We are needed to make this class thread safe"""
@@ -5,6 +6,7 @@ from collections import defaultdict
 
 class EmployeeIdStore:
     __INSTANCE = None
+    __INSTANCE_LOCK = threading.Lock()  # we are using locks to make this class thread safe
 
     def __init__(self):
         self.employees = defaultdict()
@@ -15,7 +17,8 @@ class EmployeeIdStore:
 
     def __new__(cls, *args, **kwargs):
         if not cls.__INSTANCE:
-            cls.__INSTANCE = super().__new__(cls)
+            with cls.__INSTANCE_LOCK:
+                cls.__INSTANCE = super().__new__(cls, *args, **kwargs)
         return cls.__INSTANCE
 
     def get_employee(self, employee_id: str):
