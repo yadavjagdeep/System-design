@@ -5,7 +5,7 @@ class Pizza(ABC):
 
     def __init__(self, ingredients: object):
         self.pizza_base = ingredients.get_base()
-        self.pizza_topping = ingredients.get_topping()
+        self.pizza_topping = ingredients.get_toppings()
         self.pizza_sauces = ingredients.get_sauces()
 
     @abstractmethod

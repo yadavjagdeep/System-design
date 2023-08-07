@@ -8,10 +8,9 @@ class Ingredients(ABC):
         raise NotImplementedError(f"subclass must implement get_base method !!!")
 
     @abstractmethod
-    def get_toppings(self):
+    def get_toppings(self) -> list:
         raise NotImplementedError(f"subclass must implement get_toppings method !!!")
 
     @abstractmethod
-    def get_sauces(self):
+    def get_sauces(self) -> list:
         raise NotImplementedError(f"subclass must implement get_sauces method !!!")
-
