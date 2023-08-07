@@ -1,4 +1,4 @@
-from factory_design_pattern.coffee.coffee_interface import Coffee
+from factory_design_pattern.coffee_machine.coffee.coffee_interface import Coffee
 
 
 class Cappuccino(Coffee):

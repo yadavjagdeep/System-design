@@ -1,4 +1,4 @@
-from factories.coffee_factory import CoffeeFactory
+from factory_design_pattern.coffee_machine.factories.coffee_factory import CoffeeFactory
 
 
 class CoffeeServer:
