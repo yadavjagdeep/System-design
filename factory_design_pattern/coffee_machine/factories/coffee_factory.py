@@ -1,13 +1,7 @@
-from factory_design_pattern.coffee.cofee_type import CoffeeName
-from factory_design_pattern.coffee.cappuccino import Cappuccino
-from factory_design_pattern.coffee.latte import Latte
-from factory_design_pattern.coffee.robusta import Robusta
-from factory_design_pattern.milk.cow_milk import CowMilk
-from factory_design_pattern.sugar.brown_sugar import BrownSugar
-from factory_design_pattern.bean.american_bean import AmericanBean
-from factory_design_pattern.milk.regular_milk import RegularMilk
-from factory_design_pattern.bean.indian_baen import IndianBean
-from factory_design_pattern.sugar.white_sugar import WhiteSugar
+from factory_design_pattern.coffee_machine.coffee.cofee_type import CoffeeName
+from factory_design_pattern.coffee_machine.coffee.cappuccino import Cappuccino
+from factory_design_pattern.coffee_machine.coffee.latte import Latte
+from factory_design_pattern.coffee_machine.coffee.robusta import Robusta
 
 # class CoffeeFactory:
 #
@@ -60,11 +54,11 @@ factory will depend only on these 3 factories.
 """
 
 # TO overcome problems like this, we can use abstract factory
-# create an abstract ingredients factory and for each extends them for their ingredients
+# create an abstract ingredients factory and for each coffee type extends them for their ingredients
 
-from factory_design_pattern.factories.cappuccino_ingredients_factory import CappuccinoIngredients
-from factory_design_pattern.factories.latte_ingredients_factory import LatteIngredients
-from factory_design_pattern.factories.robusta_ingredients_factory import RobustaIngredients
+from factory_design_pattern.coffee_machine.factories.cappuccino_ingredients_factory import CappuccinoIngredients
+from factory_design_pattern.coffee_machine.factories.latte_ingredients_factory import LatteIngredients
+from factory_design_pattern.coffee_machine.factories.robusta_ingredients_factory import RobustaIngredients
 
 
 class CoffeeFactory:
