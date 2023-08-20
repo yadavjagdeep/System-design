@@ -9,19 +9,19 @@ class Atm:
 
     def initialize_machine(self):
         if self.state.value == ATMState.CARD_READING.value:
-            raise RuntimeError("Can't initialize currently in card reading state")
+            raise RuntimeError("Can't initialize currently in card reading states")
         if self.state.value == ATMState.CASH_DISPENSING.value:
-            raise RuntimeError("Can't initialize currently in card reading state")
+            raise RuntimeError("Can't initialize currently in card reading states")
 
         # more such condition conditions in all the transition methods
-        # This is because the next state of the atm depends on the current state
+        # This is because the next states of the atm depends on the current states
 
 
 """
-To over this problem the 'state' that is changing can be made of polymorphic type 
+To over this problem the 'states' that is changing can be made of polymorphic type 
 """
 
-from State_design.state.state_factory import StateFactory
+from State_design.factories.state_factory import StateFactory
 from State_design.db.db_accessor import DBAccessor
 
 

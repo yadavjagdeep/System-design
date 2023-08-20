@@ -1,9 +1,9 @@
 from State_design.ATM.atm_state import ATMState
-from ready_state import Ready_state
-from card_reading_state import CardReadingState
-from cash_withdrwal_state import CashWithdrawalState
-from cash_dispensing_state import CashDispensingState
-from card_ejecting_state import CardEjectingState
+from State_design.states.ready_state import Ready_state
+from State_design.states.card_reading_state import CardReadingState
+from State_design.states.cash_withdrawal_details_reading_state import CashWithdrawalDetailsReadingState
+from State_design.states.cash_dispensing_state import CashDispensingState
+from State_design.states.card_ejecting_state import CardEjectingState
 
 
 class StateFactory:
@@ -17,6 +17,6 @@ class StateFactory:
         elif state == ATMState.CARD_EJECTING.value:
             return CardEjectingState(ATM)
         elif state == ATMState.WITHDRAWAL_DETAILS_READING.value:
-            return CashWithdrawalState(ATM)
+            return CashWithdrawalDetailsReadingState(ATM)
         else:
             return Ready_state(ATM)
