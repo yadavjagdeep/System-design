@@ -1,6 +1,6 @@
-from State_design.states.base_state import State
-from State_design.ATM.atm_state import ATMState
-from State_design.factories.state_factory import StateFactory
+from State_design.atm_machine.states.base_state import State
+from State_design.atm_machine.ATM.atm_state import ATMState
+from State_design.atm_machine.factories import StateFactory
 
 
 class CardEjectingState(State):

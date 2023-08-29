@@ -21,8 +21,8 @@ class Atm:
 To over this problem the 'states' that is changing can be made of polymorphic type 
 """
 
-from State_design.factories.state_factory import StateFactory
-from State_design.db.db_accessor import DBAccessor
+from State_design.atm_machine.factories.state_factory import StateFactory
+from State_design.atm_machine.db.db_accessor import DBAccessor
 
 
 class ATM:
