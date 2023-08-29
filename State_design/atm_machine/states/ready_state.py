@@ -1,7 +1,7 @@
 from .base_state import State
-from State_design.db.db_accessor import DBAccessor
-from State_design.ATM.atm_state import ATMState
-from State_design.factories.state_factory import StateFactory
+from State_design.atm_machine.db.db_accessor import DBAccessor
+from State_design.atm_machine.ATM.atm_state import ATMState
+from State_design.atm_machine.factories import StateFactory
 
 
 class Ready_state(State):

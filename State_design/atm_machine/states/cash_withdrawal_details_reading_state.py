@@ -1,8 +1,8 @@
 from .base_state import State
-from State_design.ATM.ATM import ATMState
-from State_design.models.data_models import CardDetails
-from State_design.db.db_accessor import DBAccessor
-from State_design.factories.state_factory import StateFactory
+from State_design.atm_machine.ATM.ATM import ATMState
+from State_design.atm_machine.models import CardDetails
+from State_design.atm_machine.db.db_accessor import DBAccessor
+from State_design.atm_machine.factories import StateFactory
 
 
 class CashWithdrawalDetailsReadingState(State):

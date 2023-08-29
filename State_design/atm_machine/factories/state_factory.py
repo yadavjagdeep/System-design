@@ -1,9 +1,9 @@
-from State_design.ATM.atm_state import ATMState
-from State_design.states.ready_state import Ready_state
-from State_design.states.card_reading_state import CardReadingState
-from State_design.states.cash_withdrawal_details_reading_state import CashWithdrawalDetailsReadingState
-from State_design.states.cash_dispensing_state import CashDispensingState
-from State_design.states.card_ejecting_state import CardEjectingState
+from State_design.atm_machine.ATM.atm_state import ATMState
+from State_design.atm_machine.states.ready_state import Ready_state
+from State_design.atm_machine.states.card_reading_state import CardReadingState
+from State_design.atm_machine.states.cash_withdrawal_details_reading_state import CashWithdrawalDetailsReadingState
+from State_design.atm_machine.states.cash_dispensing_state import CashDispensingState
+from State_design.atm_machine.states.card_ejecting_state import CardEjectingState
 
 
 class StateFactory:
