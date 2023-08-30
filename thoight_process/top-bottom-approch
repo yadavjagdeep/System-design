@@ -1,0 +1,8 @@
+''' While designing a system it is always a good practice to think in terms of Top-Bottom '''
+
+1. Will try to visualize the GUI of the system, it will give us sense of what all features the system will have.
+2. Once we have some picture in our mind, how our system will look like for user, will get idea of what all classes
+   and APIs server app will need to have in order to full fill GUI request needs.
+3. Giving a thought of data-bases will also help to understand how class will interact with DB and what kind of data
+   each table will have
+

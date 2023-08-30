@@ -1,0 +1,11 @@
+We are needed to design a cricket scoreboard for below 3 use cases
+1. Projected Scoreboard
+2. Runrate Scoreboard
+3. Top Discussion board
+
+We are supplied with 3 kinds of data:
+1. Runs
+2. Wickets
+3. Overs
+
+above 3 score boards use these 3 supplied data and runs their algorithm to display on board
