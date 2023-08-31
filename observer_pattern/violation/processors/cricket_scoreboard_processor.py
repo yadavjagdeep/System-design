@@ -1,6 +1,11 @@
 class CricketScoreBoardProcessor:
 
-    def __init__(self, runs: int, wickets: int, overs: float):
+    def __init__(self):
+        self._runs = None
+        self._wickets = None
+        self._overs = None
+
+    def update_score(self, runs: int, wickets: int, overs: float):
         self._runs = runs
         self._wickets = wickets
         self._overs = overs

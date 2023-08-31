@@ -1,4 +1,4 @@
-from observer_pattern.voilation.processors.cricket_scoreboard_processor import CricketScoreBoardProcessor
+from observer_pattern.violation.processors.cricket_scoreboard_processor import CricketScoreBoardProcessor
 
 
 class TopDiscussionBoardProcessor:
@@ -29,6 +29,6 @@ class TopDiscussionBoardProcessor:
 
             if is_updated:
                 # logic to persist data in db
-                # algorithm to compute top discussion
+                # algorithm for top discussion
                 # logic to update the board display
                 pass

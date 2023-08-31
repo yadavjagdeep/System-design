@@ -1,4 +1,4 @@
-from observer_pattern.voilation.processors.cricket_scoreboard_processor import CricketScoreBoardProcessor
+from observer_pattern.violation.processors.cricket_scoreboard_processor import CricketScoreBoardProcessor
 
 
 class RunRateScoreBoardProcessor:
