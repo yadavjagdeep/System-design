@@ -1,0 +1,3 @@
+-> we are needed to make publisher interface so that each subscriber can:
+1. subscribe and unsubscribe at runtime
+2. flexibility to the subscribers to get only data that is needed by them, like run_rate_processor not needs wicket
