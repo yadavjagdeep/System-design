@@ -1,0 +1,7 @@
+Problems in the implementation defined in violation directory:
+-> Each board processor either its projected scoreboard or run rate scoreboard processor are wasting CPU cycle they are
+running a while loop continuously and polling data from 'CricketScoreBoardProcessor' class
+-> To fix this instead of polling in the respective board processor the 'CricketScoreBoardProcessor' can push the data
+ to the respective board processor, in that case they do not need to poll.
+-> We can look it as 'CricketScoreBoardProcessor' is a publisher and respective board processors are subscribers
+-> 'Observer pattern' is also called as 'Publish Subscribe' a pattern

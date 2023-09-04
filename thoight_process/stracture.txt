@@ -1,0 +1,29 @@
+'''
+=> LLD lies between GUI and DB
+
+A widely accepted stracture for LLD is
+top -> API layer
+middle -> Business class layer
+bottom -> Data access layer
+'''
+
+Let's take an example to understand the above
+
+$ API layer
+issueBook(book_id: str, member_id: str, token: str)
+
+$ Business layer classes
+-> UserAuthentication(token)
+-> Searcher(*args, **kwargs)
+-> Library(*args, **kwargs)
+
+$ Data Access layer
+
+"""
+Api layer knows very little about business classes, business classes know nothing about DB access layer
+
+=> Point is code is separated basis three operation layers and are independent of each other
+"""
+
+
+
