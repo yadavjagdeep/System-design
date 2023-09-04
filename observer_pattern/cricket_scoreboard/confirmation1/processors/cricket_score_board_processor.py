@@ -5,7 +5,7 @@ from observer_pattern.cricket_scoreboard.confirmation1.processors.run_rate_score
 
 class CricketScoreBoardProcessor:
     """
-    While creating the object of Scoreboard processor, all the subscribers are injected when the update
+    While creating the object of Scoreboard processors, all the subscribers are injected when the update
     method is called every time with data the same data is injected to all the subscribers
     """
     def __init__(self, projected_scoreboard: ProjectedScoreBoardProcessor,
