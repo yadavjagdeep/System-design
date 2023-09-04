@@ -10,14 +10,13 @@ class RunRateScoreBoardProcessor(Subscriber):
         self._overs = None
         self.publisher = publisher
 
-    def update(self, runs: int, wickets: int, overs: float):
+    def update(self):
+        runs: int = self.publisher.get_runs()
+        overs: float = self.publisher.get_overs()
+
         is_updated: bool = False
         if self._runs != runs:
             self._runs = runs
-            is_updated = True
-
-        if self._wickets != wickets:
-            self._wickets = wickets
             is_updated = True
 
         if self._overs != overs:
