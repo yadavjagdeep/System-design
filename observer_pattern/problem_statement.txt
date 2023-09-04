@@ -8,4 +8,4 @@ We are supplied with 3 kinds of data:
 2. Wickets
 3. Overs
 
-above 3 score boards use these 3 supplied data and runs their algorithm to display on board
+above 3 score boards use these 3 supplied data and run their algorithm to display on board

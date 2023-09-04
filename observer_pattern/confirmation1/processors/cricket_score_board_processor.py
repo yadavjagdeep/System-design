@@ -33,5 +33,5 @@ Although the solution looks good but it have some design flaws:
 1. Violation of dependency inversion principle(DIP), here the top level module 'CricketScoreBoardProcessor' depends on
 low level entity like 'ProjectedScoreBoardProcessor' and 'RunRateScoreBoardProcessor'
 
-2. 
+2. There is no way here such that a subscriber class can unsubscribes from the publisher at runtime
 """
