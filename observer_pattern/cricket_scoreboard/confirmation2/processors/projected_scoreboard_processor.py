@@ -1,8 +1,8 @@
-from observer_pattern.confirmation2.processors.abstract_subscriber import Subscriber
-from observer_pattern.confirmation2.processors.abstract_publisher import Publisher
+from observer_pattern.cricket_scoreboard.confirmation2.processors.abstract_subscriber import Subscriber
+from observer_pattern.cricket_scoreboard.confirmation2.processors.abstract_publisher import Publisher
 
 
-class RunRateScoreBoardProcessor(Subscriber):
+class ProjectedScoreBoardProcessor(Subscriber):
 
     def __init__(self, publisher: Publisher):
         self._runs = None
@@ -26,6 +26,8 @@ class RunRateScoreBoardProcessor(Subscriber):
 
         if is_updated:
             # logic to persist data in db
-            # algorithm to compute run rate score
+            # algorithm to compute projected score
             # logic to update the board display
             pass
+
+

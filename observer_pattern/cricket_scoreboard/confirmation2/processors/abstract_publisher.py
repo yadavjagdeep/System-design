@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from observer_pattern.confirmation2.processors.abstract_subscriber import Subscriber
+from observer_pattern.cricket_scoreboard.confirmation2.processors.abstract_subscriber import Subscriber
 
 
 class Publisher(ABC):

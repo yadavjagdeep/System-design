@@ -1,5 +1,5 @@
-from observer_pattern.confirmation2.processors.abstract_publisher import Publisher
-from observer_pattern.confirmation2.processors.abstract_subscriber import Subscriber
+from observer_pattern.cricket_scoreboard.confirmation2.processors.abstract_publisher import Publisher
+from observer_pattern.cricket_scoreboard.confirmation2.processors.abstract_subscriber import Subscriber
 
 
 class CricketScoreBoardProcessor(Publisher):

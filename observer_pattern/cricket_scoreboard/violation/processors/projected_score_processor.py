@@ -1,4 +1,4 @@
-from observer_pattern.violation.processors.cricket_scoreboard_processor import CricketScoreBoardProcessor
+from observer_pattern.cricket_scoreboard.violation.processors.cricket_scoreboard_processor import CricketScoreBoardProcessor
 
 
 class ProjectedScoreBoardProcessor:
