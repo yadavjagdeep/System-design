@@ -1,0 +1,5 @@
+Altough the design looks good respecting the solid design principles but it has one major issue
+"class explosion"
+
+Pizza type gets changes by just changing one ingredient of the pizza, we might end of creating classes for all the
+combination of the ingredients we have to create pizza which is not a good way to design system
