@@ -1,4 +1,4 @@
-from enquiry_handler.factories.enquiry_handler_factory import RequestHandlerFactory
+from chaining_pattern.enquiry_handler.factories.enquiry_handler_factory import RequestHandlerFactory
 
 
 class EnquiryHandlerApi:

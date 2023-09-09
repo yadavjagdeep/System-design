@@ -1,5 +1,5 @@
-from enquiry_handler.handler.base_enquiry_handler import BaseEnquiryHandler
-from enquiry_handler.utilities.constants import EnquiryType
+from chaining_pattern.enquiry_handler.handler.base_enquiry_handler import BaseEnquiryHandler
+from chaining_pattern.enquiry_handler.utilities.constants import EnquiryType
 
 
 class IdleHandler(BaseEnquiryHandler):

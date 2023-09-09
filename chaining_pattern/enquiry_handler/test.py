@@ -1,4 +1,4 @@
-from enquiry_handler.apis.enquiry_handler_api import EnquiryHandlerApi
+from chaining_pattern.enquiry_handler.apis.enquiry_handler_api import EnquiryHandlerApi
 
 
 def test_enquiry_api():
