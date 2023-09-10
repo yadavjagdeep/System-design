@@ -1,6 +1,6 @@
 The idea of decorator pattern is to add behavior or responsibility to an object dynamically
 
-Let's look at how we can use it to resolve the issues in current implementation of pizza class
+Let's look at how we can use it to resolve the issues in the current implementation of pizza class
 
 Will distinguish pizza basis the base and add toppings as decorator on the pizza
 
