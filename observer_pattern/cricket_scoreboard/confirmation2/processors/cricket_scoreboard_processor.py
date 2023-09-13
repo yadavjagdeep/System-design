@@ -4,11 +4,11 @@ from observer_pattern.cricket_scoreboard.confirmation2.processors.abstract_subsc
 
 class CricketScoreBoardProcessor(Publisher):
 
-    def __init__(self, subscribers: list[Subscriber]):
+    def __init__(self):
         self._runs = None
         self._wickets = None
         self._overs = None
-        self.subscribers = subscribers
+        self.subscribers = []
 
     def subscribe(self, subscriber: Subscriber):
         self.subscribers.append(subscriber)
