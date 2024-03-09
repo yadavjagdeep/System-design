@@ -1,0 +1,14 @@
+We need to support tag manager for helping in discussion foram where students can add tags while asking for question or
+adding reply to some questions.
+
+Operations needed to be supported in tag-manager are:
+1. Insert Tag
+2. Delete Tag
+3. Delete Based on regex
+4. Update Tag
+5. Get Tags
+
+
+Violation:
+One Solution is to write a tag manager class which will have methods for all the above operations, which will be
+correct functionally, but it has a lot of design flows.
