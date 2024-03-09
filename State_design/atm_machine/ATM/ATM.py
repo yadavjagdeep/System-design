@@ -18,7 +18,7 @@ class Atm:
 
 
 """
-To over this problem the 'states' that is changing can be made of polymorphic type 
+To over come this problem the 'states' that is changing can be made of polymorphic type 
 """
 
 from State_design.atm_machine.factories.state_factory import StateFactory
