@@ -1,0 +1,12 @@
+Functional requirements:
+1. Given a URL, our service should be able to generate a unique alias for the same.
+2. User should be redirected to the original url when they visit the short url
+3. Links should expire after a default timespan
+
+Non-functional requirements:
+1. High availability with minimal latency
+2. The system should be scalable and efficient
+
+Extended requirements:
+1. Prevent abuse of service
+2. Analytics
