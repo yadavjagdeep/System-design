@@ -3,4 +3,4 @@ from command_pattern.confirmation.receivers.partial_match_delete_reciver import 
 from command_pattern.confirmation.receivers.update_tag_receiver import TagUpdater
 from command_pattern.confirmation.receivers.insert_tag_receiver import TagInserter
 
-__all__ = [PerfectMatchDeleter, PartialMatchDeleter, TagUpdater, TagInserter]
+__all__ = ['PerfectMatchDeleter', 'PartialMatchDeleter', 'TagUpdater', 'TagInserter']
