@@ -1,0 +1,10 @@
+Requirements:
+1. Registering User
+2. Login (2- Factor Auth)
+3. Profile Creation
+4. Set Preferences
+5. Sending Email (With Attachments)
+6. Searching Email
+7. Tagging Emails
+8. Spam and Virus Detection
+9. Contacts and Groups
