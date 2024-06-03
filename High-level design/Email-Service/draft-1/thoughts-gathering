@@ -27,5 +27,27 @@ the service and route the request.
 "Service Manager" will update the cache when needed and gateway can get service from the cache only.
 
 8. The auth service once receives the request it verifies the username and the passcode if valid it picks the phone number
-generates an otp, makes request to notification service to send and notification to the client, If client enters valid
+generates an otp, makes request to notification service to send a notification to the client, If client enters valid
 otp within the timely update the user status as verified. else mark verification as False.
+
+<---------------------------------------------------------------------------------------------------------------------->
+
+1. Now let's look at auth service, In a request its contains token auth service needs to pull userId verify if token is
+valid
+
+
+
+
+
+
+
+# problem in maintaining cache of auth service at Gateway
+Maintaining data of some-other service while it's logic is in separate service is anti-pattern
+why?
+1. We have to have additional code and logic to maintain the cache
+2. We have to provision that much memory, we are bloating the service
+3. cache duplication -> since gateway is distributed service running on multiple container,all the containers need to
+have complete information of cache, if we have too much container say 500, it will become fanout to update the cache
+
+-> pull out the cache from gateway and maintain a global cache
+-> gateway can pull data from cache and auth service will update that global cache
