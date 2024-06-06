@@ -1,4 +1,4 @@
-from repository_pattern.user_repository import User
+from repository_pattern.repository import User
 
 if __name__ == "__main__":
     _user = User(**{"_id": '001', 'userId': "user001", 'name': 'amit', 'email': '7jdeep@gmail.com'})

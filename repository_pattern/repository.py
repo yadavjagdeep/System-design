@@ -8,3 +8,11 @@ class User(InMemoryRepository):
     userId: str
     name: str
     email: str
+
+
+@dataclass
+class Order(InMemoryRepository):
+    _id: str
+    orderId: str
+    product: str
+    quantity: int
