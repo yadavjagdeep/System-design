@@ -9,6 +9,10 @@ class User(InMemoryRepository):
     name: str
     email: str
 
+    @InMemoryRepository.repo.getter
+    def repo(self) -> str:
+        return 'user'
+
 
 @dataclass
 class Order(InMemoryRepository):
@@ -16,3 +20,7 @@ class Order(InMemoryRepository):
     orderId: str
     product: str
     quantity: int
+
+    @InMemoryRepository.repo.getter
+    def repo(self) -> str:
+        return 'order'

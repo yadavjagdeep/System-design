@@ -55,7 +55,7 @@ class UnitOfWork:
 
     def register_update(self, entity, repo_name: str):
         # save the original state of entity before updating
-        original_entity = self.repositories[repo_name].get(entity._id)
+        original_entity = self.repositories[repo_name]().get(entity._id)
 
         if original_entity:
             self._original_states[repo_name][entity._id] = original_entity
@@ -73,13 +73,13 @@ class UnitOfWork:
     def commit(self):
         try:
             for repo_name, entity in self._new_entities:
-                self.repositories[repo_name].add(entity.__dict__)
+                self.repositories[repo_name]().add(entity.__dict__)
 
             for repo_name, entity in self._update_entities:
-                self.repositories[repo_name].add(entity.__dict__)
+                self.repositories[repo_name]().add(entity.__dict__)
 
             for repo_name, entity in self._removed_entities:
-                self.repositories[repo_name].add(entity.__dict__)
+                self.repositories[repo_name]().add(entity.__dict__)
 
             self._clear()
         except Exception as e:
@@ -89,12 +89,12 @@ class UnitOfWork:
     def rollback(self):
         for repo_name, entity in self._original_states.items():
             for _id, original_entity in entity.items():
-                self.repositories[repo_name].update(_id, original_entity)
+                self.repositories[repo_name]().update(_id, original_entity)
         for repo_name, entity in self._new_entities:
-            self.repositories[repo_name].delete(entity._id)
+            self.repositories[repo_name]().delete(entity._id)
 
         for repo_name, entity in self._removed_entities:
-            self.repositories[repo_name].add(entity._id)
+            self.repositories[repo_name]().add(entity._id)
         self._clear()
 
     def _clear(self):

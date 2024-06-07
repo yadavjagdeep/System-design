@@ -1,31 +1,32 @@
 from typing import Any
+from collections import defaultdict
 
 from repository_pattern.base_repository import Repository
 
 
 class InMemoryRepository(Repository):
-    __DATA_STORE = {}
+    __DATA_STORE = defaultdict(dict)
 
-    @classmethod
-    def get(cls, _id: Any) -> Any:
-        return cls.__DATA_STORE.get(_id)
+    @property
+    def repo(self) -> str:
+        raise Exception("Subclass must implement @InMemoryRepository.repo.getter")
 
-    @classmethod
-    def get_all(cls) -> Any:
-        return cls.__DATA_STORE
+    def get(self, _id: Any) -> Any:
+        return self.__DATA_STORE.get(self.repo, {}).get(_id)
 
-    @classmethod
-    def add(cls, data: dict) -> Any:
+    def get_all(self) -> Any:
+        return self.__DATA_STORE.get(self.repo)
+
+    def add(self, data: dict) -> Any:
+        print(f'property - {self.repo}')
         if not data.get('_id'):
             raise ValueError('_id in mandatory param to create data')
-        cls.__DATA_STORE[data['_id']] = data
+        self.__DATA_STORE[self.repo][data['_id']] = data
 
-    @classmethod
-    def update(cls, _id: Any, data: Any) -> Any:
-        cls.__DATA_STORE[_id] = data
+    def update(self, _id: Any, data: Any) -> Any:
+        self.__DATA_STORE[self.repo][_id] = data
 
-    @classmethod
-    def delete(cls, _id: Any) -> Any:
-        if _id not in cls.__DATA_STORE:
+    def delete(self, _id: Any) -> Any:
+        if _id not in self.__DATA_STORE.get(self.repo):
             raise ValueError(f'No data exits for _id - {_id}')
-        cls.__DATA_STORE.pop(_id)
+        self.__DATA_STORE[self.repo].pop(_id)

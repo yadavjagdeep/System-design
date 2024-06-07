@@ -9,12 +9,14 @@ if __name__ == "__main__":
         transaction.register_repository('order', Order)
 
         # register new users
+        _user = User(_id='', userId='', name='', email='')
         user1 = User(_id="U1", userId="user1", name="John Doe", email="john@example.com")
         user2 = User(_id="U2", userId="user2", name="Jane Doe", email="jane@example.com")
         transaction.register_new(user1, 'user')
         transaction.register_new(user2, 'user')
 
         # register new orders
+        _order = Order(_id='', orderId='', product='', quantity=0)
         order1 = Order(_id="OD1", orderId="order1", product="Laptop", quantity=1)
         order2 = Order(_id="OD2", orderId="order2", product="Phone", quantity=2)
         transaction.register_new(order1, 'order')
@@ -27,5 +29,5 @@ if __name__ == "__main__":
         # remove a user
         transaction.register_removed(user2, 'user')
 
-    print(User.get_all())
-    print(Order.get_all())
+    print(_user.get_all())
+    print(_order.get_all())

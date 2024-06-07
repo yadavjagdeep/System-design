@@ -1,8 +1,10 @@
 from repository_pattern.repository import User
 
 if __name__ == "__main__":
-    _user = User(**{"_id": '001', 'userId': "user001", 'name': 'amit', 'email': '7jdeep@gmail.com'})
-    _user.add(_user.__dict__)
+    _user = User(_id='', userId='', name='', email='')
+
+    _user.add({"_id": '001', 'userId': "user001", 'name': 'amit', 'email': '7jdeep@gmail.com'})
+    # _user.add(_user.__dict__)
 
     print(_user.get("001"))
 
@@ -11,10 +13,10 @@ if __name__ == "__main__":
 
     print(_user.get("001"))
 
-    _user = User(**{"_id": '002', 'userId': "user002", 'name': 'zishan', 'email': 'zkkhan@gmail.com'})
-    _user.add(_user.__dict__)
+    _user.add({"_id": '002', 'userId': "user002", 'name': 'zishan', 'email': 'zkkhan@gmail.com'})
+    # _user.add(_user.__dict__)
 
-    print(User.get_all())
+    print(_user.get_all())
 
 
 
