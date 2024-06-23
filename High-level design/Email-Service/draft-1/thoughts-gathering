@@ -1,0 +1,31 @@
+GateWay -> Acts as interaction layer between the client and the services serving the request
+AuthService -> Microservice acts as an standalone service to do all validation stuff, exposed APIs to validate a request
+
+
+
+Execution of clients request and how design evolves
+1. The Gateway need to know what all api the service withing a system serves so that it can route the request to correct
+service.
+
+2. Let's say we have a request "www.xyz.com/auth?user-name=7jdeep&passcode=#@32@!#"
+On the basis of xyz the domain name DNS return the IP of the system, Now the gateWay needs to route the request to
+internal servie which can process the request.
+
+3. 'auth' the part of the url after .com is what gateway can use to identify the same if it know that 'authentication service'
+can serve this request.
+
+4. The idea is when a service starts in the system it should register itself to the gateway.
+
+5. We can do that but do we want to put this additional responsibility to the gateway, as it's not just once a service starts
+it should register itself to gateway, a service have multiple instances and to be in sync of their status that are they
+live or dead, gateway will need to listen their heartbeat, and update liveliness.
+
+6. The better way is to decouple this responsibility to a separate service say "Service Manager", gateway can just get
+the service and route the request.
+
+7. Here we are adding extra API call to get service, to improve on that lets add a cache at Gateway, The
+"Service Manager" will update the cache when needed and gateway can get service from the cache only.
+
+8. The auth service once receives the request it verifies the username and the passcode if valid it picks the phone number
+generates an otp, makes request to notification service to send and notification to the client, If client enters valid
+otp within the timely update the user status as verified. else mark verification as False.
